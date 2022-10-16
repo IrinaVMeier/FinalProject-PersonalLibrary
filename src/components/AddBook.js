@@ -5,12 +5,12 @@ let e = React.createElement;
 
 let title;
 let author;
-let ibsn;
+let isbn;
 let genre;
 
 export default class Wishlist extends React.Component {
   handleClick() {
-    BookManager.createBook(title, author, genre, ibsn);
+    BookManager.createBook(title, author, genre, isbn);
     this.props.func();
     this.bookName.value='';
     this.bookAuthor.value='';
@@ -27,7 +27,7 @@ export default class Wishlist extends React.Component {
   }
 
   handleIbsnUpdate(e) {
-    ibsn = e.target.value
+    isbn = e.target.value
   }
 
   handleGenreUpdate(e) {
